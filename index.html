@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── SEO ──────────────────────────────────────────────── -->
+  <title>Amisha Gupta | Web Developer &amp; Backend Engineer</title>
+  <meta name="description"
+    content="Portfolio of Amisha Gupta, a web developer specializing in PHP, Laravel, CodeIgniter, APIs and custom web applications. Available for freelance development projects." />
+  <meta name="keywords"
+    content="Amisha Gupta, web developer, PHP developer, Laravel developer, CodeIgniter, backend developer, freelance web developer, API development, India" />
+  <meta name="author" content="Amisha Gupta" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://amishagupta.dev/" />
+
+  <!-- ── OPEN GRAPH ────────────────────────────────────────── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://amishagupta.dev/" />
+  <meta property="og:title" content="Amisha Gupta | Web Developer &amp; Backend Engineer" />
+  <meta property="og:description"
+    content="Web developer specializing in PHP, Laravel, CodeIgniter and custom backend-driven web applications. Available for freelance projects." />
+  <meta property="og:site_name" content="Amisha Gupta" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Amisha Gupta | Web Developer &amp; Backend Engineer" />
+  <meta name="twitter:description"
+    content="Web developer specializing in PHP, Laravel, CodeIgniter and custom web applications." />
+
+  <!-- ── STRUCTURED DATA ───────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Amisha Gupta",
+    "jobTitle": "Web Developer & Backend Engineer",
+    "description": "Web developer specializing in PHP, Laravel, CodeIgniter, REST APIs and custom web applications.",
+    "email": "amishag16@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/amisha-gupta-6057061a9/",
+      "https://github.com/techie829-oss"
+    ],
+    "knowsAbout": ["PHP", "Laravel", "CodeIgniter", "MySQL", "REST APIs", "JavaScript", "Tailwind CSS"],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Apollo Institute of Engineering and Technology"
+    },
+    "url": "https://amishagupta.dev/"
+  }
+  </script>
+
+  <!-- ── FONTS ─────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- ── TAILWIND CDN ──────────────────────────────────────── -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+            manrope: ['Manrope', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- ── LUCIDE ICONS ──────────────────────────────────────── -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- ── CUSTOM STYLES ─────────────────────────────────────── -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- ── EARLY THEME SCRIPT (Prevents Flash) ──────────────────── -->
+  <script>
+      (function () {
+        const savedTheme = localStorage.getItem('amisha_theme') ||
+          (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      })();
+  </script>
+</head>
+
+<body class="bg-grid">
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!--  NAVBAR                                               -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="font-display font-bold text-lg tracking-tight text-white flex items-center gap-3">
+        <div class="nav-avatar-wrap">
+          <img src="images/amisha-profile.png" alt="Amisha Gupta" class="nav-avatar-img" />
+          <span class="nav-avatar-dot"></span>
+        </div>
+        <span class="flex items-center gap-1.5"><span class="text-gradient">Amisha</span><span
+            style="color:var(--text-secondary)">Gupta</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-7">
+        <a href="#work" class="nav-link" data-section="work">Work</a>
+        <a href="#services" class="nav-link" data-section="services">Services</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </div>
+
+      <!-- Action Area: Theme Toggle + CTA + Hamburger -->
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle Button -->
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle light and dark theme"
+          title="Toggle Light/Dark Theme">
+          <i data-lucide="sun" class="theme-icon-sun" style="width:19px;height:19px;"></i>
+          <i data-lucide="moon" class="theme-icon-moon" style="width:19px;height:19px;"></i>
+        </button>
+
+        <!-- Desktop CTA -->
+        <a href="#contact" class="hidden md:inline-flex btn-primary"
+          style="padding:0.625rem 1.375rem; font-size:0.875rem;">
+          Let's Work Together <i data-lucide="arrow-right" style="width:15px;height:15px;"></i>
+        </a>
+
+        <!-- Hamburger -->
+        <button class="hamburger md:hidden" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button class="mobile-close" id="mobile-close" aria-label="Close navigation">
+      <i data-lucide="x" style="width:18px;height:18px;"></i>
+    </button>
+
+    <!-- Mobile Drawer Profile Header -->
+    <div
+      style="display:flex;align-items:center;justify-content:space-between;padding-bottom:1.25rem;margin-bottom:0.75rem;border-bottom:1px solid var(--border);">
+      <div style="display:flex;align-items:center;gap:0.875rem;">
+        <div class="nav-avatar-wrap" style="width:44px;height:44px;">
+          <img src="images/amisha-profile.png" alt="Amisha Gupta" class="nav-avatar-img" />
+          <span class="nav-avatar-dot" style="width:12px;height:12px;"></span>
+        </div>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary);font-size:1rem;">Amisha Gupta</div>
+          <div style="font-size:0.78rem;color:var(--accent-light);">Web &amp; Backend Engineer</div>
+        </div>
+      </div>
+      <!-- Mobile Theme Toggle -->
+      <button id="mobileThemeToggleBtn" class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle Theme">
+        <i data-lucide="sun" class="theme-icon-sun" style="width:18px;height:18px;"></i>
+        <i data-lucide="moon" class="theme-icon-moon" style="width:18px;height:18px;"></i>
+      </button>
+    </div>
+
+    <a href="#work" class="mobile-nav-link">Work</a>
+    <a href="#services" class="mobile-nav-link">Services</a>
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#experience" class="mobile-nav-link">Experience</a>
+    <a href="#skills" class="mobile-nav-link">Skills</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <div style="margin-top:1.5rem;">
+      <a href="#contact" class="btn-primary w-full justify-center"
+        onclick="document.getElementById('mobile-menu').classList.remove('open');">
+        Let's Work Together <i data-lucide="arrow-right" style="width:15px;height:15px;"></i>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!--  HERO                                                 -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <section id="hero"
+      style="min-height:100vh; display:flex; align-items:center; padding-top:80px; position:relative; overflow:hidden;">
+      <!-- Background glows -->
+      <div class="glow-orb" style="width:600px;height:600px;background:rgba(59,130,246,0.08);top:-100px;left:-150px;">
+      </div>
+      <div class="glow-orb" style="width:400px;height:400px;background:rgba(139,92,246,0.055);bottom:-50px;right:0;">
+      </div>
+
+      <div class="max-w-6xl mx-auto px-6 py-20 w-full"
+        style="display:grid; grid-template-columns:1fr auto; gap:3rem; align-items:center;">
+        <!-- Left: Hero Content -->
+        <div style="max-width:700px;">
+          <div class="hero-animate availability-badge">
+            <span class="pulse-dot"></span>
+            Available for Freelance Projects
+          </div>
+
+          <h1 class="hero-animate font-display font-bold leading-tight"
+            style="font-size:clamp(2.6rem,5.8vw,4.5rem); letter-spacing:-0.03em; color:var(--text-primary); margin-bottom:1.5rem; line-height:1.08;">
+            I Build Web Apps<br>
+            <span class="text-gradient-animated">That Turn Ideas</span><br>
+            Into Real Products.
+          </h1>
+
+          <p class="hero-animate"
+            style="font-size:1.0625rem; color:var(--text-secondary); line-height:1.78; max-width:580px; margin-bottom:2.25rem;">
+            Web Developer specializing in <strong style="color:var(--text-primary); font-weight:600;">PHP, Laravel,
+              CodeIgniter</strong> and backend-driven web applications — focused on clean architecture, reliable
+            functionality and user-friendly experiences.
+          </p>
+
+          <div class="hero-animate" style="display:flex; flex-wrap:wrap; gap:0.875rem; margin-bottom:2.5rem;">
+            <a href="#contact" class="btn-primary">
+              Start a Project <i data-lucide="arrow-right" style="width:16px;height:16px;"></i>
+            </a>
+            <a href="#work" class="btn-secondary">
+              View My Work <i data-lucide="briefcase" style="width:16px;height:16px;"></i>
+            </a>
+          </div>
+
+          <!-- Tech Strip -->
+          <div class="hero-animate" style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+            <span class="tech-pill">PHP</span>
+            <span class="tech-pill">Laravel</span>
+            <span class="tech-pill">CodeIgniter</span>
+            <span class="tech-pill">MySQL</span>
+            <span class="tech-pill">REST APIs</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <!-- Right: Developer Profile & Code Showcase Visual -->
+        <div class="hero-right" style="width:420px; flex-shrink:0; position:relative;">
+          <!-- Ambient glowing aura -->
+          <div class="hero-ambient-glow"></div>
+
+          <!-- Showcase Card -->
+          <div class="hero-profile-card anim-float">
+            <!-- Window top navigation / Tab Switcher -->
+            <div class="profile-card-header">
+              <div class="window-dots">
+                <span class="window-dot dot-r"></span>
+                <span class="window-dot dot-y"></span>
+                <span class="window-dot dot-g"></span>
+              </div>
+              <div class="hero-tab-pills">
+                <button type="button" class="hero-tab-btn active" id="heroTabProfile"
+                  onclick="switchHeroTab('profile')">
+                  <i data-lucide="user" style="width:13px;height:13px;"></i> Profile
+                </button>
+                <button type="button" class="hero-tab-btn" id="heroTabCode" onclick="switchHeroTab('code')">
+                  <i data-lucide="code-2" style="width:13px;height:13px;"></i> Code
+                </button>
+              </div>
+              <span class="profile-status-ping" title="Open to Freelance Projects">
+                <span class="pulse-dot"></span> Available
+              </span>
+            </div>
+
+            <!-- Tab 1: Profile View -->
+            <div class="hero-tab-content" id="heroTabContentProfile">
+              <div class="hero-dp-frame-wrapper">
+                <div class="hero-dp-frame">
+                  <img src="images/amisha-profile.png" alt="Amisha Gupta - Web Developer" class="hero-dp-img" />
+                  <div class="hero-dp-overlay-gradient"></div>
+
+                  <!-- Live tag badge over photo -->
+                  <div class="hero-dp-live-badge">
+                    <span class="pulse-dot"></span> Open to Projects
+                  </div>
+
+                  <!-- Bottom caption inside image -->
+                  <div class="hero-dp-bottom-caption">
+                    <div class="hero-dp-name">
+                      Amisha Gupta
+                      <span class="verified-badge" title="Verified Developer">
+                        <i data-lucide="badge-check" style="width:18px;height:18px;color:#38bdf8;"></i>
+                      </span>
+                    </div>
+                    <div class="hero-dp-title">Software Engineer • PHP &amp; Laravel</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Metrics inside card -->
+              <div class="hero-dp-stats-grid">
+                <div class="hero-stat-box">
+                  <div class="hero-stat-val text-gradient">3+</div>
+                  <div class="hero-stat-lbl">Roles</div>
+                </div>
+                <div class="hero-stat-box">
+                  <div class="hero-stat-val text-gradient">6+</div>
+                  <div class="hero-stat-lbl">Live Apps</div>
+                </div>
+                <div class="hero-stat-box">
+                  <div class="hero-stat-val text-gradient">100%</div>
+                  <div class="hero-stat-lbl">Backend</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: Code View -->
+            <div class="hero-tab-content" id="heroTabContentCode" style="display:none;">
+              <div class="code-body">
+                <div class="code-line"><span class="ln">1</span><span class="lc"><span class="cmt">// Laravel
+                      Controller</span></span></div>
+                <div class="code-line"><span class="ln">2</span><span class="lc"></span></div>
+                <div class="code-line"><span class="ln">3</span><span class="lc"><span class="ck">namespace</span> <span
+                      class="cd">App\Http\Controllers;</span></span></div>
+                <div class="code-line"><span class="ln">4</span><span class="lc"></span></div>
+                <div class="code-line"><span class="ln">5</span><span class="lc"><span class="ck">class</span> <span
+                      class="cc">ProjectController</span> <span class="ck">extends</span> <span
+                      class="cc">Controller</span></span></div>
+                <div class="code-line"><span class="ln">6</span><span class="lc"><span class="cd">{</span></span></div>
+                <div class="code-line"><span class="ln">7</span><span class="lc"> <span class="ck">public
+                      function</span> <span class="cf">store</span><span class="cd">(</span><span
+                      class="cc">Request</span> <span class="cv">$request</span><span class="cd">)</span></span></div>
+                <div class="code-line"><span class="ln">8</span><span class="lc"> <span class="cd">{</span></span></div>
+                <div class="code-line"><span class="ln">9</span><span class="lc"> <span class="cv">$project</span> <span
+                      class="cd">=</span> <span class="cc">Project</span><span class="cd">::</span><span
+                      class="cf">create</span><span class="cd">([</span></span></div>
+                <div class="code-line"><span class="ln">10</span><span class="lc"> <span class="cs">'title'</span> <span
+                      class="cd">=></span> <span class="cv">$request</span><span class="cd">-></span><span
+                      class="cf">title</span><span class="cd">,</span></span></div>
+                <div class="code-line"><span class="ln">11</span><span class="lc"> <span class="cs">'status'</span>
+                    <span class="cd">=></span> <span class="cs">'active'</span><span class="cd">,</span></span></div>
+                <div class="code-line"><span class="ln">12</span><span class="lc"> <span class="cd">]);</span></span>
+                </div>
+                <div class="code-line"><span class="ln">13</span><span class="lc"></span></div>
+                <div class="code-line"><span class="ln">14</span><span class="lc"> <span class="ck">return</span> <span
+                      class="cf">response</span><span class="cd">()-></span><span class="cf">json</span><span
+                      class="cd">([</span></span></div>
+                <div class="code-line"><span class="ln">15</span><span class="lc"> <span class="cs">'success'</span>
+                    <span class="cd">=></span> <span class="ck">true</span><span class="cd">,</span></span></div>
+                <div class="code-line"><span class="ln">16</span><span class="lc"> <span class="cs">'project'</span>
+                    <span class="cd">=></span> <span class="cv">$project</span><span class="cd">,</span></span></div>
+                <div class="code-line"><span class="ln">17</span><span class="lc"> <span class="cd">]);</span></span>
+                </div>
+                <div class="code-line"><span class="ln">18</span><span class="lc"> <span class="cd">}</span></span>
+                </div>
+                <div class="code-line"><span class="ln">19</span><span class="lc"><span class="cd">}</span></span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Badges around Showcase -->
+          <div class="floating-badge anim-float-d" style="top:-20px; left:-35px;">
+            <span style="font-size:1.05rem;">⚡</span>
+            <div>
+              <div style="font-size:0.68rem;color:var(--text-muted);font-weight:600;line-height:1;">BACKEND</div>
+              <div style="font-size:0.8rem;font-weight:700;color:var(--text-primary);">Laravel 11 &amp; PHP</div>
+            </div>
+          </div>
+
+          <div class="floating-badge" style="top:45px; right:-35px; animation:floatYd 5.8s ease-in-out infinite 0.7s;">
+            <div
+              style="width:20px;height:20px;border-radius:6px;background:rgba(59,130,246,0.2);display:flex;align-items:center;justify-content:center;color:var(--accent-light);">
+              <i data-lucide="briefcase" style="width:12px;height:12px;"></i>
+            </div>
+            <div>
+              <div style="font-size:0.68rem;color:var(--text-muted);font-weight:600;line-height:1;">CURRENT ROLE</div>
+              <div style="font-size:0.8rem;font-weight:700;color:var(--accent-light);">MAKEMAYA</div>
+            </div>
+          </div>
+
+          <div class="floating-badge"
+            style="bottom:65px; left:-40px; animation:floatYd 6.2s ease-in-out infinite 1.4s;">
+            <div
+              style="width:20px;height:20px;border-radius:6px;background:rgba(34,197,94,0.2);display:flex;align-items:center;justify-content:center;color:#4ade80;">
+              <i data-lucide="check-circle" style="width:12px;height:12px;"></i>
+            </div>
+            <div>
+              <div style="font-size:0.68rem;color:var(--text-muted);font-weight:600;line-height:1;">DELIVERED</div>
+              <div style="font-size:0.8rem;font-weight:700;color:var(--text-primary);">6+ Live Projects</div>
+            </div>
+          </div>
+
+          <div class="floating-badge"
+            style="bottom:-18px; right:-15px; animation:floatYd 5.2s ease-in-out infinite 2s;">
+            <span style="font-size:1.05rem;">🛢️</span>
+            <div>
+              <div style="font-size:0.68rem;color:var(--text-muted);font-weight:600;line-height:1;">DATABASE</div>
+              <div style="font-size:0.8rem;font-weight:700;color:var(--text-primary);">MySQL &amp; REST APIs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!--  TRUST STRIP                                          -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <section id="trust" style="padding:0 0 5rem;" aria-label="Credentials overview">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="divider" style="margin-bottom:3.5rem;"></div>
+        <p class="text-center reveal"
+          style="color:var(--text-muted);font-size:0.8rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2rem;">
+          Real Projects. Real Development. Business-Focused Solutions.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="trust-item reveal reveal-d1">
+            <div class="trust-icon">
+              <i data-lucide="monitor" style="width:20px;height:20px;"></i>
+            </div>
+            <div>
+              <div style="font-weight:600;font-size:0.9375rem;color:var(--text-primary);margin-bottom:0.25rem;">
+                Production Web Applications</div>
+              <div style="font-size:0.825rem;color:var(--text-muted);">Real-world, live projects delivered end-to-end
+              </div>
+            </div>
+          </div>
+          <div class="trust-item reveal reveal-d2">
+            <div class="trust-icon">
+              <i data-lucide="server" style="width:20px;height:20px;"></i>
+            </div>
+            <div>
+              <div style="font-weight:600;font-size:0.9375rem;color:var(--text-primary);margin-bottom:0.25rem;">Backend
+                &amp; API Development</div>
+              <div style="font-size:0.825rem;color:var(--text-muted);">Reliable systems, structured APIs and database
+                design</div>
+            </div>
+          </div>
+          <div class="trust-item reveal reveal-d3">
+            <div class="trust-icon">
+              <i data-lucide="code-2" style="width:20px;height:20px;"></i>
+            </div>
+            <div>
+              <div style="font-weight:600;font-size:0.9375rem;color:var(--text-primary);margin-bottom:0.25rem;">PHP /
+                Laravel / CodeIgniter</div>
+              <div style="font-size:0.825rem;color:var(--text-muted);">Hands-on experience with modern PHP frameworks
+              </div>
+            </div>
+          </div>
+          <div class="trust-item reveal reveal-d4">
+            <div class="trust-icon">
+              <i data-lucide="smartphone" style="width:20px;height:20px;"></i>
+            </div>
+            <div>
+              <div style="font-weight:600;font-size:0.9375rem;color:var(--text-primary);margin-bottom:0.25rem;">
+                Responsive &amp; User-Focused</div>
+              <div style="font-size:0.825rem;color:var(--text-muted);">Interfaces that work cleanly on every device
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!--  SELECTED WORK                                        -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <section id="work" style="padding:5rem 0 6rem;" aria-label="Portfolio projects">
+      <div class="max-w-6xl mx-auto px-6">
+        <!-- Heading -->
+        <div class="reveal" style="margin-bottom:3.5rem;">
+          <div class="section-label">Selected Work</div>
+          <h2 class="font-display font-bold text-gradient"
+            style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;line-height:1.15;margin-bottom:1rem;">
+            Projects I've Built
+          </h2>
+          <p style="color:var(--text-secondary);font-size:1.0625rem;max-width:560px;line-height:1.72;">
+            A selection of websites and digital products I've worked on across different industries — from sports
+            platforms to SaaS company websites.
+          </p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- ── PROJECT 01: Champions T10 ── -->
+          <article class="project-card reveal reveal-d1" data-project="champions-t10"
+            aria-label="Champions League T10 project">
+            <div class="project-number">01</div>
+            <div class="project-thumb">
+              <div class="project-thumb-inner"
+                style="background:linear-gradient(135deg,#1a0d2e 0%,#0d1a3a 50%,#1a1200 100%);">
+                <!-- Abstract visual -->
+                <div
+                  style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.75rem;">
+                  <div
+                    style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#fbbf24,#f59e0b);display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 0 40px rgba(251,191,36,0.3);">
+                    🏆</div>
+                  <div
+                    style="font-family:'Manrope',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;color:rgba(255,255,255,0.4);text-transform:uppercase;">
+                    Champions League T10</div>
+                </div>
+                <!-- Decorative lines -->
+                <div
+                  style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(to top,rgba(0,0,0,0.5),transparent);">
+                </div>
+                <div
+                  style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(251,191,36,0.4),transparent);">
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-cat">Sports / Entertainment Platform</div>
+              <h3 class="project-title">Champions League T10</h3>
+              <p class="project-desc">A high-impact digital platform combining player registration, team management,
+                league information, live updates and a news section for the Champions League T10 cricket tournament.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">CodeIgniter</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://www.championst10.com" target="_blank" rel="noopener noreferrer" class="btn-primary"
+                  style="font-size:0.8375rem;padding:0.6rem 1.1rem;">
+                  View Live <i data-lucide="external-link" style="width:14px;height:14px;"></i>
+                </a>
+                <button class="btn-outline" style="font-size:0.8375rem;" data-open-modal="champions-t10">
+                  Case Study <i data-lucide="file-text" style="width:14px;height:14px;"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── PROJECT 02: Pandit Kapil ── -->
+          <article class="project-card reveal reveal-d2" data-project="pandit-kapil"
+            aria-label="Shree Hit Pandit Kapil Vaid Ji project">
+            <div class="project-number">02</div>
+            <div class="project-thumb">
+              <div class="project-thumb-inner"
+                style="background:linear-gradient(135deg,#1e0a14 0%,#2d1300 60%,#1a0a2a 100%);">
+                <div
+                  style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.75rem;">
+                  <div
+                    style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#f97316,#ea580c);display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 0 40px rgba(249,115,22,0.3);">
+                    🪔</div>
+                  <div
+                    style="font-family:'Manrope',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:0.08em;color:rgba(255,255,255,0.4);text-transform:uppercase;text-align:center;padding:0 1rem;">
+                    Professional Service</div>
+                </div>
+                <div
+                  style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(249,115,22,0.4),transparent);">
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-cat">Professional / Service Website</div>
+              <h3 class="project-title">Shree Hit Pandit Kapil Vaid Ji</h3>
+              <p class="project-desc">A service-focused professional website with structured content, clear service
+                sections, credibility presentation and an optimized contact experience for prospective clients.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">HTML5 / CSS3</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Responsive</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-ghost" style="font-size:0.8375rem;cursor:default;" disabled>
+                  <i data-lucide="lock" style="width:13px;height:13px;"></i> URL Private
+                </button>
+                <button class="btn-outline" style="font-size:0.8375rem;" data-open-modal="pandit-kapil">
+                  Case Study <i data-lucide="file-text" style="width:14px;height:14px;"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── PROJECT 03: Solidrix ── -->
+          <article class="project-card reveal reveal-d3" data-project="solidrix"
+            aria-label="Solidrix Technologies project">
+            <div class="project-number">03</div>
+            <div class="project-thumb">
+              <div class="project-thumb-inner"
+                style="background:linear-gradient(135deg,#060d1f 0%,#0a1f38 50%,#071a2e 100%);">
+                <div
+                  style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.75rem;">
+                  <div
+                    style="width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,#3b82f6,#1d4ed8);display:flex;align-items:center;justify-content:center;font-size:1.875rem;box-shadow:0 0 40px rgba(59,130,246,0.4);">
+                    ⚡</div>
+                  <div
+                    style="font-family:'Manrope',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;color:rgba(255,255,255,0.4);text-transform:uppercase;">
+                    Technology / SaaS</div>
+                </div>
+                <!-- Circuit-like decorative element -->
+                <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.06;" viewBox="0 0 420 210"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <line x1="0" y1="60" x2="420" y2="60" stroke="#3b82f6" stroke-width="1" />
+                  <line x1="0" y1="150" x2="420" y2="150" stroke="#3b82f6" stroke-width="1" />
+                  <line x1="80" y1="0" x2="80" y2="210" stroke="#3b82f6" stroke-width="1" />
+                  <line x1="200" y1="0" x2="200" y2="210" stroke="#3b82f6" stroke-width="1" />
+                  <line x1="340" y1="0" x2="340" y2="210" stroke="#3b82f6" stroke-width="1" />
+                  <circle cx="80" cy="60" r="4" fill="#3b82f6" />
+                  <circle cx="200" cy="150" r="4" fill="#3b82f6" />
+                  <circle cx="340" cy="60" r="4" fill="#3b82f6" />
+                </svg>
+                <div
+                  style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(59,130,246,0.5),transparent);">
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-cat">Technology / SaaS Company</div>
+              <h3 class="project-title">Solidrix Technologies</h3>
+              <p class="project-desc">A modern technology company website presenting custom SaaS, enterprise software,
+                AI solutions, CRM/HRMS and cloud infrastructure services with strong conversion focus.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://solidrix.com" target="_blank" rel="noopener noreferrer" class="btn-primary"
+                  style="font-size:0.8375rem;padding:0.6rem 1.1rem;">
+                  View Live <i data-lucide="external-link" style="width:14px;height:14px;"></i>
+                </a>
+                <button class="btn-outline" style="font-size:0.8375rem;" data-open-modal="solidrix">
+                  Case Study <i data-lucide="file-text" style="width:14px;height:14px;"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── PROJECT 04: Pro100 ── -->
+          <article class="project-card reveal reveal-d1" data-project="pro100" aria-label="Pro100 project">
+            <div class="project-number">04</div>
+            <div class="project-thumb">
+              <div class="project-thumb-inner"
+                style="background:linear-gradient(135deg,#071420 0%,#0a1f18 60%,#0d0d1a 100%);">
+                <div
+                  style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.75rem;">
+                  <div
+                    style="width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,#10b981,#059669);display:flex;align-items:center;justify-content:center;font-size:1.875rem;box-shadow:0 0 40px rgba(16,185,129,0.3);">
+                    📊</div>
+                  <div
+                    style="font-family:'Manrope',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;color:rgba(255,255,255,0.4);text-transform:uppercase;">
+                    Business Platform</div>
+                </div>
+                <div
+                  style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(16,185,129,0.4),transparent);">
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-cat">Business Web Platform</div>
+              <h3 class="project-title">Pro100</h3>
+              <p class="project-desc">A professional business web platform developed with structured backend
+                architecture, admin management capabilities and a clean, user-friendly interface for business
+                operations.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Responsive</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-ghost" style="font-size:0.8375rem;cursor:default;" disabled>
+                  <i data-lucide="lock" style="width:13px;height:13px;"></i> URL Private
+                </button>
+                <button class="btn-outline" style="font-size:0.8375rem;" data-open-modal="pro100">
+                  Case Study <i data-lucide="file-text" style="width:14px;height:14px;"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── PROJECT 05: Avara Stays ── -->
+          <article class="project-card reveal reveal-d2" data-project="avara-stays" aria-label="Avara Stays project">
+            <div class="project-number">05</div>
+            <div class="project-thumb">
+              <div class="project-thumb-inner"
+                style="background:linear-gradient(135deg,#071428 0%,#0a2028 50%,#071c28 100%);">
+                <div
+                  style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.75rem;">
+                  <div
+                    style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#06b6d4,#0891b2);display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 0 40px rgba(6,182,212,0.3);">
+                    🏨</div>
+                  <div
+                    style="font-family:'Manrope',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;color:rgba(255,255,255,0.4);text-transform:uppercase;">
+                    Hospitality / Travel</div>
+                </div>
+                <!-- Wave decoration -->
+                <svg style="position:absolute;bottom:0;left:0;right:0;width:100%;opacity:0.1;" viewBox="0 0 420 50"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0,30 Q105,10 210,30 T420,30 L420,50 L0,50 Z" fill="#06b6d4" />
+                </svg>
+                <div
+                  style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(6,182,212,0.5),transparent);">
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-cat">Hospitality / Travel</div>
+              <h3 class="project-title">Avara Stays</h3>
+              <p class="project-desc">A hospitality web platform designed to showcase properties, support booking
+                inquiries and deliver a conversion-optimized experience for travelers — responsive and cleanly
+                structured.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Responsive</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-ghost" style="font-size:0.8375rem;cursor:default;" disabled>
+                  <i data-lucide="lock" style="width:13px;height:13px;"></i> URL Private
+                </button>
+                <button class="btn-outline" style="font-size:0.8375rem;" data-open-modal="avara-stays">
+                  Case Study <i data-lucide="file-text" style="width:14px;height:14px;"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── PROJECT 06: LearMy EduCoach ── -->
+          <article class="project-card reveal reveal-d3" data-project="learmy" aria-label="LearMy EduCoach project">
+            <div class="project-number">06</div>
+            <div class="project-thumb">
+              <div class="project-thumb-inner"
+                style="background:linear-gradient(135deg,#1a0828 0%,#0a0f28 60%,#180a28 100%);">
+                <div
+                  style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.75rem;">
+                  <div
+                    style="width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,#a855f7,#9333ea);display:flex;align-items:center;justify-content:center;font-size:1.875rem;box-shadow:0 0 40px rgba(168,85,247,0.3);">
+                    🎓</div>
+                  <div
+                    style="font-family:'Manrope',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;color:rgba(255,255,255,0.4);text-transform:uppercase;">
+                    Education / EdTech</div>
+                </div>
+                <div
+                  style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(168,85,247,0.5),transparent);">
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-cat">Education / EdTech</div>
+              <h3 class="project-title">LearMy EduCoach</h3>
+              <p class="project-desc">An educational web platform presenting courses and coaching services with
+                structured content, clear enrollment pathways and a responsive user experience designed for student
+                discovery.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Responsive</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-ghost" style="font-size:0.8375rem;cursor:default;" disabled>
+                  <i data-lucide="lock" style="width:13px;height:13px;"></i> URL Private
+                </button>
+                <button class="btn-outline" style="font-size:0.8375rem;" data-open-modal="learmy">
+                  Case Study <i data-lucide="file-text" style="width:14px;height:14px;"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <!-- end project grid -->
+
+        <p class="reveal" style="text-align:center;color:var(--text-muted);font-size:0.875rem;margin-top:2.5rem;">
+          Click any project card to view the full case study.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!--  SERVICES                                             -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <section id="services" style="padding:5rem 0 6rem;background:var(--bg-secondary);" aria-label="Services offered">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal" style="margin-bottom:3.5rem;">
+          <div class="section-label">Services</div>
+          <h2 class="font-display font-bold text-gradient"
+            style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;line-height:1.15;margin-bottom:1rem;">
+            What I Can Build For You
+          </h2>
+          <p style="color:var(--text-secondary);font-size:1.0625rem;max-width:520px;line-height:1.72;">
+            From backend APIs to full business web applications — practical development work focused on real results.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <div class="service-card reveal reveal-d1">
+            <div class="service-icon">
+              <i data-lucide="layout-panel-left" style="width:22px;height:22px;"></i>
+            </div>
+            <h3 class="font-display font-bold"
+              style="font-size:1.0625rem;color:var(--text-primary);margin-bottom:0.625rem;">Custom Web Development</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.72;">Business websites and custom web
+              applications built around specific requirements — not templates.</p>
+          </div>
+
+          <div class="service-card reveal reveal-d2">
+            <div class="service-icon">
+              <i data-lucide="server" style="width:22px;height:22px;"></i>
+            </div>
+            <h3 class="font-display font-bold"
+              style="font-size:1.0625rem;color:var(--text-primary);margin-bottom:0.625rem;">Backend Development</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.72;">Reliable, structured backend
+              systems using PHP, Laravel and CodeIgniter with clean database architecture.</p>
+          </div>
+
+          <div class="service-card reveal reveal-d3">
+            <div class="service-icon">
+              <i data-lucide="plug-zap" style="width:22px;height:22px;"></i>
+            </div>
+            <h3 class="font-display font-bold"
+              style="font-size:1.0625rem;color:var(--text-primary);margin-bottom:0.625rem;">REST API Development</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.72;">Secure, structured APIs for web
+              apps, mobile applications and third-party integrations.</p>
+          </div>
+
+          <div class="service-card reveal reveal-d1">
+            <div class="service-icon">
+              <i data-lucide="table-2" style="width:22px;height:22px;"></i>
+            </div>
+            <h3 class="font-display font-bold"
+              style="font-size:1.0625rem;color:var(--text-primary);margin-bottom:0.625rem;">CRM &amp; Business
+              Applications</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.72;">Custom CRM systems, admin panels,
+              dashboards and workflow-driven internal tools.</p>
+          </div>
+
+          <div class="service-card reveal reveal-d2">
+            <div class="service-icon">
+              <i data-lucide="globe" style="width:22px;height:22px;"></i>
+            </div>
+            <h3 class="font-display font-bold"
+              style="font-size:1.0625rem;color:var(--text-primary);margin-bottom:0.625rem;">Website Development</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.72;">Modern responsive websites
+              designed for usability, performance and lead conversion.</p>
+          </div>
+
+          <div class="service-card reveal reveal-d3">
+            <div class="service-icon">
+              <i data-lucide="wrench" style="width:22px;height:22px;"></i>
+            </div>
+            <h3 class="font-display font-bold"
+              style="font-size:1.0625rem;color:var(--text-primary);margin-bottom:0.625rem;">Maintenance &amp;
+              Optimization</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.72;">Bug fixing, performance
+              improvements, feature development and ongoing technical support for live applications.</p>
+          </div>
+
+        </div>
+
+        <div class="reveal" style="text-align:center;margin-top:3rem;">
+          <a href="#contact" class="btn-secondary" style="font-size:0.9375rem;">
+            Have a Project in Mind? Let's Talk <i data-lucide="arrow-right" style="width:16px;height:16px;"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!--  ABOUT                                                -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <section id="about" style="padding:5rem 0 6rem;" aria-label="About Amisha Gupta">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+
+          <!-- Left: Story -->
+          <div>
+            <div class="section-label reveal">About</div>
+            <h2 class="font-display font-bold text-gradient reveal"
+              style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;line-height:1.15;margin-bottom:1.5rem;">
+              Developer with a Focus on Practical Results
+            </h2>
+
+            <div class="reveal" style="display:flex;flex-direction:column;gap:1.25rem;">
+              <p style="color:var(--text-secondary);font-size:1.0rem;line-height:1.80;">
+                I'm Amisha Gupta, a web developer with a B.Tech in Computer Science and Engineering and hands-on
+                experience building and maintaining real-world web applications across multiple industries.
+              </p>
+              <p style="color:var(--text-secondary);font-size:1.0rem;line-height:1.80;">
+                My focus is on <strong style="color:var(--text-primary);font-weight:600;">PHP-based backend
+                  development</strong> — using Laravel, CodeIgniter and clean database architecture to build
+                applications that are maintainable, reliable and built to last in production.
+              </p>
+              <p style="color:var(--text-secondary);font-size:1.0rem;line-height:1.80;">
+                I work across the full development lifecycle — from understanding requirements to building, testing and
+                deploying. I collaborate closely with developers, designers and project stakeholders to turn
+                requirements into working, production-ready solutions.
+              </p>
+              <p style="color:var(--text-secondary);font-size:1.0rem;line-height:1.80;">
+                Whether it's a new web application from scratch, an API integration, a backend system or a feature
+                addition to an existing platform — I focus on delivering work that actually functions correctly and
+                serves the business it's built for.
+              </p>
+            </div>
+
+            <div class="reveal" style="margin-top:2rem;">
+              <a href="#contact" class="btn-primary">
+                Start a Conversation <i data-lucide="arrow-right" style="width:16px;height:16px;"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Profile & Education -->
+          <div class="reveal" style="display:flex;flex-direction:column;gap:1rem;">
+
+            <!-- About DP Spotlight Card -->
+            <div class="about-dp-card">
+              <div class="about-dp-thumb">
+                <img src="images/amisha-profile.png" alt="Amisha Gupta" />
+              </div>
+              <div class="about-dp-info">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.25rem;">
+                  <span
+                    style="font-size:0.72rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--accent-light);">Software
+                    Engineer</span>
+                  <span
+                    style="display:inline-flex;align-items:center;gap:0.3rem;font-size:0.7rem;color:#4ade80;font-weight:600;"><span
+                      class="pulse-dot" style="width:6px;height:6px;"></span> Active</span>
+                </div>
+                <h3 class="font-display font-bold text-white flex items-center gap-1.5"
+                  style="font-size:1.15rem;margin-bottom:0.35rem;">
+                  Amisha Gupta
+                  <i data-lucide="badge-check" style="width:16px;height:16px;color:#38bdf8;"></i>
+                </h3>
+                <p style="font-size:0.8375rem;color:var(--text-secondary);line-height:1.5;">Specialized in PHP, Laravel
+                  &amp; CodeIgniter backend architectures and custom web apps.</p>
+              </div>
+            </div>
+
+            <div
+              style="background:var(--bg-card);border:1px solid var(--border-card);border-radius:var(--radius-lg);padding:1.75rem;transition:all var(--transition);"
+              onmouseover="this.style.borderColor='var(--border-hover)'"
+              onmouseout="this.style.borderColor='var(--border-card)'">
+              <div style="display:flex;align-items:flex-start;gap:1rem;">
+                <div
+                  style="width:46px;height:46px;border-radius:11px;background:var(--accent-dim);border:1px solid var(--accent-border);display:flex;align-items:center;justify-content:center;color:var(--accent-light);flex-shrink:0;">
+                  <i data-lucide="graduation-cap" style="width:22px;height:22px;"></i>
+                </div>
+                <div>
+                  <div
+                    style="font-size:0.72rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--accent-light);margin-bottom:0.4rem;">
+                    Education</div>
+                  <h3 class="font-display"
+                    style="font-size:1.0625rem;font-weight:700;color:var(--text-primary);margin-bottom:0.2rem;">B.Tech —
+                    Computer Science &amp; Engineering</h3>
+                  <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:0.2rem;">Apollo Institute of
+                    Engineering and Technology</p>
+                  <p style="font-size:0.8rem;color:var(--text-muted);">2020 – 2023</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              style="background:var(--bg-card);border:1px solid var(--border-card);border-radius:var(--radius-lg);padding:1.75rem;transition:all var(--transition);"
+              onmouseover="this.style.borderColor='var(--border-hover)'"
+              onmouseout="this.style.borderColor='var(--border-card)'">
+              <div style="display:flex;align-items:flex-start;gap:1rem;">
+                <div
+                  style="width:46px;height:46px;border-radius:11px;background:var(--accent-dim);border:1px solid var(--accent-border);display:flex;align-items:center;justify-content:center;color:var(--accent-light);flex-shrink:0;">
+                  <i data-lucide="book-open" style="width:22px;height:22px;"></i>
+                </div>
+                <div>
+                  <div
+                    style="font-size:0.72rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--accent-light);margin-bottom:0.4rem;">
+                    Prior Education</div>
+                  <h3 class="font-display"
+                    style="font-size:1.0625rem;font-weight:700;color:var(--text-primary);margin-bottom:0.2rem;">Diploma
+                    — Computer Science</h3>
+                  <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:0.2rem;">Polytechnic Institute
+                  </p>
+                  <p style="font-size:0.8rem;color:var(--text-muted);">Prior to B.Tech</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Location / Status -->
+            <div
+              style="background:var(--bg-card);border:1px solid var(--border-card);border-radius:var(--radius-lg);padding:1.5rem;display:flex;gap:1.5rem;flex-wrap:wrap;">
+              <div style="display:flex;align-items:center;gap:0.625rem;">
+                <i data-lucide="map-pin" style="width:16px;height:16px;color:var(--text-muted);"></i>
+                <span style="font-size:0.875rem;color:var(--text-secondary);">Noida, Uttar Pradesh, India</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:0.625rem;">
+                <span class="pulse-dot"></span>
+                <span style="font-size:0.875rem;color:#4ade80;font-weight:600;">Open to Freelance</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!--  EXPERIENCE TIMELINE                                  -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <section id="experience" style="padding:5rem 0 6rem;background:var(--bg-secondary);" aria-label="Work experience">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+
+          <!-- Sticky left heading (desktop) -->
+          <div class="lg:col-span-2">
+            <div class="section-label reveal">Experience</div>
+            <h2 class="font-display font-bold text-gradient reveal"
+              style="font-size:clamp(2rem,4vw,2.75rem);letter-spacing:-0.02em;line-height:1.15;margin-bottom:1rem;">
+              Where I've Worked
+            </h2>
+            <p class="reveal" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;max-width:340px;">
+              Three developer roles across growing tech companies — each building on the last with more responsibility
+              and wider scope.
+            </p>
+          </div>
+
+          <!-- Timeline -->
+          <div class="lg:col-span-3">
+            <div class="timeline">
+
+              <!-- MAKEMAYA -->
+              <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <div class="timeline-period">
+                    <i data-lucide="calendar" style="width:13px;height:13px;"></i>
+                    Apr 2025 — Present
+                    <span
+                      style="background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.25);color:#4ade80;font-size:0.68rem;padding:0.15rem 0.5rem;border-radius:100px;font-weight:700;">Current</span>
+                  </div>
+                  <div class="timeline-role">Software Engineer</div>
+                  <div class="timeline-company" style="font-weight:600;color:var(--accent-light);">MAKEMAYA</div>
+                  <div class="timeline-location">
+                    <i data-lucide="map-pin" style="width:12px;height:12px;"></i>
+                    Noida, Uttar Pradesh
+                  </div>
+                  <div class="timeline-tasks">
+                    <div class="timeline-task">Backend development with PHP and Laravel</div>
+                    <div class="timeline-task">Web application development and feature implementation</div>
+                    <div class="timeline-task">REST API development and integration</div>
+                    <div class="timeline-task">Database design, management and query optimization</div>
+                    <div class="timeline-task">Production system maintenance and bug resolution</div>
+                    <div class="timeline-task">Performance improvements across existing applications</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- WOOST -->
+              <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <div class="timeline-period">
+                    <i data-lucide="calendar" style="width:13px;height:13px;"></i>
+                    May 2024 — Apr 2025
+                  </div>
+                  <div class="timeline-role">Software Engineer</div>
+                  <div class="timeline-company" style="font-weight:600;color:var(--accent-light);">WOOST</div>
+                  <div class="timeline-location">
+                    <i data-lucide="map-pin" style="width:12px;height:12px;"></i>
+                    Noida, Uttar Pradesh
+                  </div>
+                  <div class="timeline-tasks">
+                    <div class="timeline-task">CodeIgniter 4 backend development</div>
+                    <div class="timeline-task">Web application development and feature delivery</div>
+                    <div class="timeline-task">API development and third-party integrations</div>
+                    <div class="timeline-task">Database management and optimization</div>
+                    <div class="timeline-task">Cross-functional collaboration with development teams</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- MoneyMasterz -->
+              <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <div class="timeline-period">
+                    <i data-lucide="calendar" style="width:13px;height:13px;"></i>
+                    Jan 2023 — Apr 2024
+                  </div>
+                  <div class="timeline-role">Web Developer</div>
+                  <div class="timeline-company" style="font-weight:600;color:var(--accent-light);">MoneyMasterz</div>
+                  <div class="timeline-location">
+                    <i data-lucide="map-pin" style="width:12px;height:12px;"></i>
+                    Noida, Uttar Pradesh
+                  </div>
+                  <div class="timeline-tasks">
+                    <div class="timeline-task">CodeIgniter 4 web application development</div>
+                    <div class="timeline-task">Frontend implementation and responsive UI development</div>
+                    <div class="timeline-task">Admin panel development for business applications</div>
+                    <div class="timeline-task">Database-driven functionality implementation</div>
+                    <div class="timeline-task">Feature development and maintenance for live systems</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!--  SKILLS                                               -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <section id="skills" style="padding:5rem 0 6rem;" aria-label="Technical skills">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal" style="margin-bottom:3.5rem;">
+          <div class="section-label">Skills</div>
+          <h2 class="font-display font-bold text-gradient"
+            style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;line-height:1.15;margin-bottom:1rem;">
+            Technical Expertise
+          </h2>
+          <p style="color:var(--text-secondary);font-size:1.0625rem;max-width:500px;line-height:1.72;">
+            Practical, hands-on skills built through real project delivery — not certifications.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+          <div class="skill-group skill-group--backend reveal reveal-d1">
+            <div class="skill-group-title">
+              <i data-lucide="server" style="width:14px;height:14px;"></i>
+              Backend
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">Laravel</span>
+              <span class="skill-tag">CodeIgniter 4</span>
+              <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag">MVC Architecture</span>
+            </div>
+          </div>
+
+          <div class="skill-group skill-group--db reveal reveal-d2">
+            <div class="skill-group-title">
+              <i data-lucide="database" style="width:14px;height:14px;"></i>
+              Database
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">Database Design</span>
+              <span class="skill-tag">Query Optimization</span>
+              <span class="skill-tag">Schema Design</span>
+              <span class="skill-tag">Migrations</span>
+            </div>
+          </div>
+
+          <div class="skill-group skill-group--frontend reveal reveal-d3">
+            <div class="skill-group-title">
+              <i data-lucide="monitor" style="width:14px;height:14px;"></i>
+              Frontend
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">Responsive Design</span>
+            </div>
+          </div>
+
+          <div class="skill-group skill-group--tools reveal reveal-d4">
+            <div class="skill-group-title">
+              <i data-lucide="wrench" style="width:14px;height:14px;"></i>
+              Tools
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">XAMPP</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!--  WHY WORK WITH ME                                     -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <section id="why" style="padding:5rem 0 6rem;background:var(--bg-secondary);" aria-label="Why work with Amisha">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal" style="margin-bottom:3.5rem;text-align:center;">
+          <div class="section-label" style="justify-content:center;">Why Work With Me</div>
+          <h2 class="font-display font-bold text-gradient"
+            style="font-size:clamp(2rem,4vw,2.875rem);letter-spacing:-0.02em;line-height:1.15;max-width:600px;margin:0 auto 1rem;">
+            Not Just Code. A Reliable Development Partner.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+          <div class="why-card reveal reveal-d1">
+            <div class="why-number">01</div>
+            <div
+              style="width:42px;height:42px;border-radius:10px;background:var(--accent-dim);border:1px solid var(--accent-border);display:flex;align-items:center;justify-content:center;color:var(--accent-light);margin-bottom:1rem;">
+              <i data-lucide="lightbulb" style="width:20px;height:20px;"></i>
+            </div>
+            <h3 class="font-display"
+              style="font-size:1rem;font-weight:700;color:var(--text-primary);margin-bottom:0.625rem;">Business
+              Understanding</h3>
+            <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.72;">I focus on what the application
+              needs to accomplish, not just how it should be coded. The goal is a product that serves a real purpose.
+            </p>
+          </div>
+
+          <div class="why-card reveal reveal-d2">
+            <div class="why-number">02</div>
+            <div
+              style="width:42px;height:42px;border-radius:10px;background:var(--accent-dim);border:1px solid var(--accent-border);display:flex;align-items:center;justify-content:center;color:var(--accent-light);margin-bottom:1rem;">
+              <i data-lucide="code-2" style="width:20px;height:20px;"></i>
+            </div>
+            <h3 class="font-display"
+              style="font-size:1rem;font-weight:700;color:var(--text-primary);margin-bottom:0.625rem;">Clean Development
+            </h3>
+            <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.72;">Readable, maintainable and
+              structured code. Not quick hacks. Development that can be understood, extended and maintained long-term.
+            </p>
+          </div>
+
+          <div class="why-card reveal reveal-d3">
+            <div class="why-number">03</div>
+            <div
+              style="width:42px;height:42px;border-radius:10px;background:var(--accent-dim);border:1px solid var(--accent-border);display:flex;align-items:center;justify-content:center;color:var(--accent-light);margin-bottom:1rem;">
+              <i data-lucide="message-square" style="width:20px;height:20px;"></i>
+            </div>
+            <h3 class="font-display"
+              style="font-size:1rem;font-weight:700;color:var(--text-primary);margin-bottom:0.625rem;">Clear
+              Communication</h3>
+            <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.72;">Consistent updates throughout
+              development. You won't have to chase me for progress. Clear communication from start to delivery.</p>
+          </div>
+
+          <div class="why-card reveal reveal-d4">
+            <div class="why-number">04</div>
+            <div
+              style="width:42px;height:42px;border-radius:10px;background:var(--accent-dim);border:1px solid var(--accent-border);display:flex;align-items:center;justify-content:center;color:var(--accent-light);margin-bottom:1rem;">
+              <i data-lucide="shield-check" style="width:20px;height:20px;"></i>
+            </div>
+            <h3 class="font-display"
+              style="font-size:1rem;font-weight:700;color:var(--text-primary);margin-bottom:0.625rem;">Long-Term Support
+            </h3>
+            <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.72;">Support doesn't have to end when
+              the website goes live. I'm available for maintenance, improvements and ongoing feature work.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!--  PROCESS                                              -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <section id="process" style="padding:5rem 0 6rem;" aria-label="Development process">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal" style="text-align:center;margin-bottom:3.5rem;">
+          <div class="section-label" style="justify-content:center;">Process</div>
+          <h2 class="font-display font-bold text-gradient"
+            style="font-size:clamp(2rem,4vw,2.875rem);letter-spacing:-0.02em;line-height:1.15;margin-bottom:1rem;">
+            How I Work
+          </h2>
+          <p style="color:var(--text-secondary);font-size:1.0625rem;max-width:480px;margin:0 auto;line-height:1.72;">
+            A straightforward development approach — from first conversation to live product.
+          </p>
+        </div>
+
+        <div class="process-steps reveal">
+          <div class="process-step">
+            <div class="process-num">01</div>
+            <div class="process-line"></div>
+            <h3 class="font-display"
+              style="font-size:0.9375rem;font-weight:700;color:var(--text-primary);margin-bottom:0.4rem;">Discuss</h3>
+            <p style="font-size:0.8375rem;color:var(--text-secondary);line-height:1.65;max-width:140px;margin:0 auto;">
+              Understand the business, goals and project requirements.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">02</div>
+            <div class="process-line"></div>
+            <h3 class="font-display"
+              style="font-size:0.9375rem;font-weight:700;color:var(--text-primary);margin-bottom:0.4rem;">Plan</h3>
+            <p style="font-size:0.8375rem;color:var(--text-secondary);line-height:1.65;max-width:140px;margin:0 auto;">
+              Define scope, technology choices and development approach.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">03</div>
+            <div class="process-line"></div>
+            <h3 class="font-display"
+              style="font-size:0.9375rem;font-weight:700;color:var(--text-primary);margin-bottom:0.4rem;">Build</h3>
+            <p style="font-size:0.8375rem;color:var(--text-secondary);line-height:1.65;max-width:140px;margin:0 auto;">
+              Develop the product with regular progress updates.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">04</div>
+            <div class="process-line"></div>
+            <h3 class="font-display"
+              style="font-size:0.9375rem;font-weight:700;color:var(--text-primary);margin-bottom:0.4rem;">Test</h3>
+            <p style="font-size:0.8375rem;color:var(--text-secondary);line-height:1.65;max-width:140px;margin:0 auto;">
+              Verify functionality, responsiveness and usability.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">05</div>
+            <h3 class="font-display"
+              style="font-size:0.9375rem;font-weight:700;color:var(--text-primary);margin-bottom:0.4rem;">Launch</h3>
+            <p style="font-size:0.8375rem;color:var(--text-secondary);line-height:1.65;max-width:140px;margin:0 auto;">
+              Deploy the completed project with handover and support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!--  FREELANCE CTA                                        -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <section id="cta" class="cta-bg" style="padding:6rem 0;" aria-label="Contact call to action">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <div class="reveal">
+          <div class="availability-badge" style="margin:0 auto 2rem;display:inline-flex;">
+            <span class="pulse-dot"></span>
+            Available for freelance web development projects
+          </div>
+          <h2 class="font-display font-bold"
+            style="font-size:clamp(2.25rem,5vw,3.75rem);letter-spacing:-0.025em;line-height:1.1;margin-bottom:1.375rem;color:var(--text-primary);">
+            Have an Idea That<br />
+            <span class="text-gradient">Needs to Be Built?</span>
+          </h2>
+          <p
+            style="color:var(--text-secondary);font-size:1.0625rem;max-width:520px;margin:0 auto 2.5rem;line-height:1.78;">
+            Tell me what you're trying to build. I'll help you turn the idea into a practical, scalable web solution.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+            <a href="#contact" class="btn-primary" style="font-size:1rem;padding:0.9375rem 2rem;">
+              Start a Conversation <i data-lucide="arrow-right" style="width:18px;height:18px;"></i>
+            </a>
+            <a href="#work" class="btn-secondary" style="font-size:1rem;padding:0.9375rem 2rem;">
+              View My Projects
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!--  CONTACT                                              -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <section id="contact" style="padding:5rem 0 6rem;background:var(--bg-secondary);" aria-label="Contact Amisha">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+
+          <!-- Left: Form -->
+          <div>
+            <div class="section-label reveal">Contact</div>
+            <h2 class="font-display font-bold text-gradient reveal"
+              style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;line-height:1.15;margin-bottom:0.75rem;">
+              Let's Start a Project
+            </h2>
+            <p class="reveal" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;margin-bottom:2rem;">
+              Describe what you're looking to build. I'll get back to you within 24 hours.
+            </p>
+
+            <!-- Success Message -->
+            <div class="form-success" id="form-success">
+              <i data-lucide="check-circle" style="width:20px;height:20px;flex-shrink:0;"></i>
+              Thank you! Your message has been sent. I'll respond within 24 hours.
+            </div>
+
+            <form id="contact-form" class="reveal" novalidate>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+                <div>
+                  <label class="form-label" for="f-name">Full Name <span
+                      style="color:var(--accent-light);">*</span></label>
+                  <input type="text" id="f-name" name="name" class="form-input" placeholder="Your name" required
+                    autocomplete="name" />
+                </div>
+                <div>
+                  <label class="form-label" for="f-email">Email Address <span
+                      style="color:var(--accent-light);">*</span></label>
+                  <input type="email" id="f-email" name="email" class="form-input" placeholder="your@email.com" required
+                    autocomplete="email" />
+                </div>
+              </div>
+              <div style="margin-bottom:1rem;">
+                <label class="form-label" for="f-type">Project Type</label>
+                <select id="f-type" name="project_type" class="form-select">
+                  <option value="">Select project type</option>
+                  <option>Web Application Development</option>
+                  <option>Backend / API Development</option>
+                  <option>CRM / Business Application</option>
+                  <option>Website Development</option>
+                  <option>Website Maintenance / Bug Fix</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div style="margin-bottom:1rem;">
+                <label class="form-label" for="f-budget">Budget Range</label>
+                <select id="f-budget" name="budget" class="form-select">
+                  <option value="">Select approximate budget</option>
+                  <option>Under ₹25,000</option>
+                  <option>₹25,000 – ₹75,000</option>
+                  <option>₹75,000 – ₹1,50,000</option>
+                  <option>₹1,50,000 – ₹5,00,000</option>
+                  <option>Above ₹5,00,000</option>
+                  <option>Let's discuss</option>
+                </select>
+              </div>
+              <div style="margin-bottom:1.5rem;">
+                <label class="form-label" for="f-details">Project Details <span
+                    style="color:var(--accent-light);">*</span></label>
+                <textarea id="f-details" name="project_details" class="form-textarea"
+                  placeholder="Tell me about your project — what you're building, what it needs to do, and any specific requirements."
+                  required></textarea>
+              </div>
+              <button type="submit" class="btn-primary"
+                style="width:100%;justify-content:center;font-size:1rem;padding:0.9375rem;">
+                Send Inquiry on WhatsApp <i data-lucide="send" style="width:17px;height:17px;"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Right: Contact Info -->
+          <div class="reveal" style="display:flex;flex-direction:column;gap:1rem;">
+
+            <div
+              style="background:var(--bg-card);border:1px solid var(--border-card);border-radius:var(--radius-lg);padding:1.75rem;margin-bottom:0.5rem;">
+              <div style="display:flex;align-items:center;gap:0.875rem;margin-bottom:0.875rem;">
+                <div class="nav-avatar-wrap" style="width:42px;height:42px;">
+                  <img src="images/amisha-profile.png" alt="Amisha Gupta" class="nav-avatar-img" />
+                  <span class="nav-avatar-dot"></span>
+                </div>
+                <div>
+                  <h3 class="font-display"
+                    style="font-size:1.0625rem;font-weight:700;color:var(--text-primary);line-height:1.2;">Let's Connect
+                    Directly</h3>
+                  <div style="font-size:0.75rem;color:#4ade80;font-weight:600;">● Online &amp; Fast Response</div>
+                </div>
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.72;">Send me a message through the
+                form or connect via the channels below. I'm responsive and happy to discuss your project.</p>
+            </div>
+
+            <a href="mailto:amishag16@gmail.com" class="contact-link" aria-label="Email Amisha Gupta">
+              <div class="contact-link-icon">
+                <i data-lucide="mail" style="width:20px;height:20px;"></i>
+              </div>
+              <div>
+                <div
+                  style="font-size:0.78rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:var(--accent-light);margin-bottom:0.2rem;">
+                  Email</div>
+                <div style="font-size:0.9375rem;font-weight:500;color:var(--text-primary);">amishag16@gmail.com</div>
+              </div>
+              <i data-lucide="arrow-right" style="width:16px;height:16px;margin-left:auto;opacity:0.4;"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/amisha-gupta-6057061a9/" target="_blank" rel="noopener noreferrer"
+              class="contact-link" aria-label="LinkedIn profile">
+              <div class="contact-link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </div>
+              <div>
+                <div
+                  style="font-size:0.78rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:var(--accent-light);margin-bottom:0.2rem;">
+                  LinkedIn</div>
+                <div style="font-size:0.9375rem;font-weight:500;color:var(--text-primary);">
+                  linkedin.com/in/amisha-gupta-6057061a9</div>
+              </div>
+              <i data-lucide="arrow-right" style="width:16px;height:16px;margin-left:auto;opacity:0.4;"></i>
+            </a>
+
+            <a href="https://github.com/techie829-oss" target="_blank" rel="noopener noreferrer" class="contact-link"
+              aria-label="GitHub profile">
+              <div class="contact-link-icon">
+                <i data-lucide="github" style="width:20px;height:20px;"></i>
+              </div>
+              <div>
+                <div
+                  style="font-size:0.78rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:var(--accent-light);margin-bottom:0.2rem;">
+                  GitHub</div>
+                <div style="font-size:0.9375rem;font-weight:500;color:var(--text-primary);">github.com/techie829-oss
+                </div>
+              </div>
+              <i data-lucide="arrow-right" style="width:16px;height:16px;margin-left:auto;opacity:0.4;"></i>
+            </a>
+
+            <a href="https://wa.me/918423538142?text=Hi%20Amisha,%20I'm%20interested%20in%20discussing%20a%20project."
+              target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="WhatsApp Amisha Gupta">
+              <div class="contact-link-icon"
+                style="background:rgba(37,211,102,0.12);border-color:rgba(37,211,102,0.3);color:#25D366;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                </svg>
+              </div>
+              <div>
+                <div
+                  style="font-size:0.78rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:#25D366;margin-bottom:0.2rem;">
+                  WhatsApp</div>
+                <div style="font-size:0.9375rem;font-weight:500;color:var(--text-primary);">+91 8423538142</div>
+              </div>
+              <i data-lucide="arrow-right" style="width:16px;height:16px;margin-left:auto;opacity:0.4;"></i>
+            </a>
+
+            <!-- Response time note -->
+            <div
+              style="display:flex;align-items:center;gap:0.625rem;padding:1rem 1.25rem;background:var(--accent-dim);border:1px solid var(--accent-border);border-radius:var(--radius-sm);">
+              <i data-lucide="clock" style="width:16px;height:16px;color:var(--accent-light);flex-shrink:0;"></i>
+              <p style="font-size:0.875rem;color:var(--text-secondary);">Typically responds within <strong
+                  style="color:var(--text-primary);">24 hours</strong>.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!--  FOOTER                                               -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <footer style="padding:3rem 0 2rem;" role="contentinfo">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start"
+        style="padding-bottom:2.5rem;border-bottom:1px solid var(--border);">
+
+        <!-- Brand -->
+        <div>
+          <div class="font-display font-bold text-lg text-gradient" style="margin-bottom:0.5rem;">Amisha Gupta</div>
+          <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:0.5rem;">Web Developer &amp; Backend
+            Engineer</p>
+          <p style="font-size:0.8125rem;color:var(--text-muted);line-height:1.6;">PHP &bull; Laravel &bull; CodeIgniter
+            &bull; APIs &bull; Web Applications</p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <div
+            style="font-size:0.72rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--accent-light);margin-bottom:1rem;">
+            Navigation</div>
+          <div style="display:flex;flex-direction:column;gap:0.625rem;">
+            <a href="#work" class="footer-link">Work</a>
+            <a href="#services" class="footer-link">Services</a>
+            <a href="#about" class="footer-link">About</a>
+            <a href="#experience" class="footer-link">Experience</a>
+            <a href="#contact" class="footer-link">Contact</a>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div>
+          <div
+            style="font-size:0.72rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--accent-light);margin-bottom:1rem;">
+            Available for Work</div>
+          <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.7;margin-bottom:1rem;">Open to freelance
+            web development projects — PHP, Laravel, CodeIgniter and custom web applications.</p>
+          <a href="#contact" class="btn-outline" style="font-size:0.85rem;">
+            Get In Touch <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div
+        style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding-top:1.75rem;">
+        <p style="font-size:0.8125rem;color:var(--text-muted);">&copy; 2026 Amisha Gupta. All rights reserved.</p>
+        <p style="font-size:0.8125rem;color:var(--text-muted);">Web Developer &amp; Backend Engineer — Noida, India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!--  CASE STUDY MODAL                                     -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="case-study-modal" role="dialog" aria-modal="true" aria-label="Project case study">
+    <div class="modal-box" id="modal-inner">
+      <!-- Filled dynamically by JS -->
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!--  FLOATING WHATSAPP BUTTON (RIGHT END)                 -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <a href="https://wa.me/918423538142?text=Hi%20Amisha,%20I'm%20interested%20in%20discussing%20a%20project."
+    target="_blank" rel="noopener noreferrer" class="floating-whatsapp" id="floatingWhatsApp"
+    title="Chat on WhatsApp (+91 8423538142)" aria-label="Chat with Amisha on WhatsApp">
+    <div class="whatsapp-badge-pill">
+      <span class="whatsapp-pill-text">Chat on WhatsApp</span>
+      <span class="whatsapp-pill-num">+91 8423538142</span>
+    </div>
+    <div class="whatsapp-circle-btn">
+      <span class="whatsapp-pulse"></span>
+      <svg class="whatsapp-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"
+        fill="white">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+      </svg>
+    </div>
+  </a>
+
+  <!-- ── SCRIPTS ────────────────────────────────────────────── -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
